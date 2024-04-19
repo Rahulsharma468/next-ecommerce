@@ -1,0 +1,48 @@
+[
+    {
+      "name": "Electronics",
+      "imageSrc": "main.jpg",
+      "id": 1
+    },
+    {
+      "name": "Clothing",
+      "imageSrc": "main.jpg",
+      "id": 2
+    },
+    {
+      "name": "Home & Garden",
+      "imageSrc": "main.jpg",
+      "id": 3
+    },
+    {
+      "name": "Books & Magazines",
+      "imageSrc": "main.jpg",
+      "id": 4
+    },
+    {
+      "name": "Sports & Outdoors",
+      "imageSrc": "main.jpg",
+      "id": 5
+    },
+    {
+      "name": "Health & Beauty",
+      "imageSrc": "main.jpg",
+      "id": 6
+    },
+    {
+      "name": "Toys & Games",
+      "imageSrc": "main.jpg",
+      "id": 7
+    },
+    {
+      "name": "Automotive",
+      "imageSrc": "main.jpg",
+      "id": 8
+    },
+    {
+      "name": "Food & Beverages",
+      "imageSrc": "main.jpg",
+      "id": 9
+    }
+  ]
+  
