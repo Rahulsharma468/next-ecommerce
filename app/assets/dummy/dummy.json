@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Mermaid",
+    "price": 600.0,
+    "discountedPrice": 450.0,
+    "discountPercentage": 25,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 2,
+    "name": "Ocean Blue",
+    "price": 800.0,
+    "discountedPrice": 640.0,
+    "discountPercentage": 20,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 3,
+    "name": "Sunset Horizon",
+    "price": 700.0,
+    "discountedPrice": 630.0,
+    "discountPercentage": 10,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 4,
+    "name": "Golden Sands",
+    "price": 900.0,
+    "discountedPrice": 900.0,
+    "discountPercentage": 0,
+    "imageSrc": "main.jpg",
+    "isOnSale": false
+  },
+  {
+    "id": 5,
+    "name": "Coral Reef",
+    "price": 750.0,
+    "discountedPrice": 675.0,
+    "discountPercentage": 10,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 6,
+    "name": "Tropical Paradise",
+    "price": 850.0,
+    "discountedPrice": 765.0,
+    "discountPercentage": 10,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 7,
+    "name": "Moonlit Bay",
+    "price": 950.0,
+    "discountedPrice": 950.0,
+    "discountPercentage": 0,
+    "imageSrc": "main.jpg",
+    "isOnSale": false
+  },
+  {
+    "id": 8,
+    "name": "Starry Night",
+    "price": 700.0,
+    "discountedPrice": 700.0,
+    "discountPercentage": 0,
+    "imageSrc": "main.jpg",
+    "isOnSale": false
+  },
+  {
+    "id": 9,
+    "name": "Emerald Isle",
+    "price": 800.0,
+    "discountedPrice": 720.0,
+    "discountPercentage": 10,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 10,
+    "name": "Sapphire Bay",
+    "price": 600.0,
+    "discountedPrice": 540.0,
+    "discountPercentage": 10,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 11,
+    "name": "Whispering Winds",
+    "price": 700.0,
+    "discountedPrice": 630.0,
+    "discountPercentage": 10,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 12,
+    "name": "Misty Mountains",
+    "price": 850.0,
+    "discountedPrice": 850.0,
+    "discountPercentage": 0,
+    "imageSrc": "main.jpg",
+    "isOnSale": false
+  },
+  {
+    "id": 13,
+    "name": "Enchanted Forest",
+    "price": 900.0,
+    "discountedPrice": 810.0,
+    "discountPercentage": 10,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 14,
+    "name": "Frosty Glades",
+    "price": 750.0,
+    "discountedPrice": 750.0,
+    "discountPercentage": 0,
+    "imageSrc": "main.jpg",
+    "isOnSale": false
+  },
+  {
+    "id": 15,
+    "name": "Winter Wonderland",
+    "price": 950.0,
+    "discountedPrice": 665.0,
+    "discountPercentage": 30,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 16,
+    "name": "Polar Paradise",
+    "price": 850.0,
+    "discountedPrice": 595.0,
+    "discountPercentage": 30,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 17,
+    "name": "Arctic Aurora",
+    "price": 1000.0,
+    "discountedPrice": 700.0,
+    "discountPercentage": 30,
+    "imageSrc": "main.jpg",
+    "isOnSale": true
+  },
+  {
+    "id": 18,
+    "name": "Northern Lights",
+    "price": 900.0,
+    "discountedPrice": 900.0,
+    "discountPercentage": 0,
+    "imageSrc": "main.jpg",
+    "isOnSale": false
+  },
+  {
+    "id": 19,
+    "name": "Aurora Borealis",
+    "price": 850.0,
+    "discountedPrice": 850.0,
+    "discountPercentage": 0,
+    "imageSrc": "main.jpg",
+    "isOnSale": false
+  },
+  {
+    "id": 20,
+    "name": "Iceberg Alley",
+    "price": 750.0,
+    "discountedPrice": 750.0,
+    "discountPercentage": 0,
+    "imageSrc": "main.jpg",
+    "isOnSale": false
+  }
+]
