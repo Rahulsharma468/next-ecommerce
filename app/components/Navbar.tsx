@@ -32,7 +32,7 @@ function Navbar() {
             </div>
             <div className="flex gap-5 justify-between self-stretch my-auto">
               <div>Gifting</div>
-              <div>Celebrity's Choice</div>
+              <div>Celebritys Choice</div>
               <div>CLEARANCE SALE</div>
             </div>
           </div>
