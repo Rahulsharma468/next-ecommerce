@@ -5,7 +5,22 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import ProductSection from "./ProductSection";
 import Carousel from "./carousel";
+import { useEffect } from "react";
+import Axios from "axios";
 function Home() {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await Axios.get("http://localhost:3000/api/product");
+        console.log(response.data.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <div>
