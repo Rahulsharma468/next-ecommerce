@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: any) {
   const { name, price } = await request.json();
+
   await connectDB();
   const product = await Product.create({
     product_name: name,
