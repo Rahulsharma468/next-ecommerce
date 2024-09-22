@@ -3,12 +3,27 @@ import Product from "@/models/product";
 import { NextResponse } from "next/server";
 
 export async function POST(request: any) {
-  const { name, price } = await request.json();
+  const {
+    name,
+    price,
+    discountedPrice,
+    discountPercentage,
+    imageSrc,
+    category,
+    subcategories,
+    isOnSale,
+  } = await request.json();
 
   await connectDB();
   const product = await Product.create({
-    product_name: name,
-    product_price: price,
+    name,
+    price,
+    discountedPrice: discountedPrice || null,
+    discountPercentage: discountPercentage || null,
+    imageSrc,
+    category,
+    subcategories: subcategories || [],
+    isOnSale: isOnSale || false,
   });
   return NextResponse.json(
     { message: "Product is created", data: product },

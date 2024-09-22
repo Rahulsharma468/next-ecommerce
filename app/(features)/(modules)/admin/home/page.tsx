@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import AdminSidebar from "@/app/components/adminSideba";
+import AdminSidebar from "@/app/components/adminSidebar";
 
-function Home() {
+function AdminProducts() {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
@@ -22,9 +22,14 @@ function Home() {
 
   return (
     <div className="flex">
+      {/* Sidebar */}
       <AdminSidebar />
-      <div className="container mx-auto p-4">
+
+      {/* Main Content */}
+      <div className="container mx-auto p-4 text-black">
         <h1 className="text-2xl font-bold mb-4">Product List</h1>
+
+        {/* Product List */}
         <ul className="space-y-4">
           {productList &&
             productList.map((product: any) => (
@@ -66,4 +71,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default AdminProducts;

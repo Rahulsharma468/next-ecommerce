@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const categorySchema: any = new Schema(
+const categorySchema = new Schema(
   {
     name: {
       type: String,
@@ -8,7 +8,7 @@ const categorySchema: any = new Schema(
     },
     imageSrc: {
       type: String,
-      required: true,
+      required: false,
     },
   },
   {
