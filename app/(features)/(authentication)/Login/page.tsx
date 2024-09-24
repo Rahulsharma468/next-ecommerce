@@ -36,7 +36,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen text-black">
       {/* Left side */}
       <div className="flex flex-col justify-center items-center w-1/2 bg-gray-100">
         <h2 className="text-3xl font-bold mb-4">Login</h2>

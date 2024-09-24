@@ -3,7 +3,6 @@ import mongoose, { Schema } from "mongoose";
 // Define the User schema
 const UserSchema = new Schema(
   {
-    // Common user fields
     username: {
       type: String,
       required: true,
@@ -18,20 +17,16 @@ const UserSchema = new Schema(
       type: String,
       required: true,
     },
-    // User role field
     role: {
       type: String,
       enum: ["user", "admin"],
       default: "user",
     },
-    // Additional admin fields
     adminInfo: {
-      // Add any admin-specific fields here
       isAdmin: {
         type: Boolean,
         default: false,
       },
-      // Example: Admin-specific permissions
       permissions: {
         type: [String],
         default: [],

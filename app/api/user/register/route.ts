@@ -1,19 +1,11 @@
 import connectDB from "@/config/mongodb";
 import User from "@/models/user";
 import { validateEmail } from "@/utils/validateEmail";
-import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
+import { NextResponse } from "next/server";
 
 export async function POST(request: any) {
   const { username, email, password } = await request.json();
-
-  // Validate input fields
-  if (!username || !email || !password) {
-    return NextResponse.json(
-      { message: "Missing required fields" },
-      { status: 400 }
-    );
-  }
 
   // Validate email format
   if (!validateEmail(email)) {
@@ -24,25 +16,33 @@ export async function POST(request: any) {
   }
 
   try {
-    // Check if the user already exists
+    // Connect to database
     await connectDB();
+
+    // Check if user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return NextResponse.json(
-        { message: "User already exists with this email" },
+        { message: "User with this email already exists" },
         { status: 400 }
       );
     }
 
-    // Encrypt the password
+    // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Save user to the database
-    await User.create({ username, email, password: hashedPassword });
+    // Create a new user
+    const newUser = new User({
+      username,
+      email,
+      password: hashedPassword,
+    });
+
+    await newUser.save();
 
     return NextResponse.json(
       { message: "User registered successfully" },
-      { status: 200 }
+      { status: 201 }
     );
   } catch (error) {
     console.error("Error registering user:", error);
