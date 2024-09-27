@@ -11,7 +11,7 @@ export async function POST(request: any) {
   // Validate email format
   if (!validateEmail(email)) {
     return NextResponse.json(
-      { message: "Invalid email format" },
+      { success: false, message: "Invalid email format" },
       { status: 400 }
     );
   }
@@ -24,7 +24,7 @@ export async function POST(request: any) {
     const user = await User.findOne({ email });
     if (!user) {
       return NextResponse.json(
-        { message: "Invalid email or password" },
+        { success: false, message: "Invalid email or password" },
         { status: 401 }
       );
     }
@@ -33,7 +33,7 @@ export async function POST(request: any) {
     const passwordMatch = await bcrypt.compare(password, user.password);
     if (!passwordMatch) {
       return NextResponse.json(
-        { message: "Invalid email or password" },
+        { success: false, message: "Invalid email or password" },
         { status: 401 }
       );
     }
@@ -47,13 +47,13 @@ export async function POST(request: any) {
 
     // Return the token in the response
     return NextResponse.json(
-      { message: "Login successful", token },
+      { success: true, message: "Login successful", token },
       { status: 200 }
     );
   } catch (error) {
     console.error("Error logging in:", error);
     return NextResponse.json(
-      { message: "Internal Server Error" },
+      { success: false, message: "Internal Server Error" },
       { status: 500 }
     );
   }

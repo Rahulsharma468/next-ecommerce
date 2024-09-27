@@ -7,10 +7,12 @@ import { NextResponse } from "next/server";
 export async function POST(request: any) {
   const { username, email, password } = await request.json();
 
+  console.log(username, email, password);
+
   // Validate email format
   if (!validateEmail(email)) {
     return NextResponse.json(
-      { message: "Invalid email format" },
+      { success: false, message: "Invalid email format" },
       { status: 400 }
     );
   }
@@ -23,7 +25,7 @@ export async function POST(request: any) {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return NextResponse.json(
-        { message: "User with this email already exists" },
+        { success: false, message: "User with this email already exists" },
         { status: 400 }
       );
     }
@@ -41,13 +43,13 @@ export async function POST(request: any) {
     await newUser.save();
 
     return NextResponse.json(
-      { message: "User registered successfully" },
-      { status: 201 }
+      { success: true, message: "User registered successfully" },
+      { status: 200 }
     );
   } catch (error) {
     console.error("Error registering user:", error);
     return NextResponse.json(
-      { message: "Internal Server Error" },
+      { success: false, message: "Internal Server Error" },
       { status: 500 }
     );
   }

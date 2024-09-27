@@ -2,11 +2,11 @@ import mongoose, { Schema } from "mongoose";
 
 const ProductSchema: any = new Schema(
   {
-    name: {
+    product_name: {
       type: String,
       required: true,
     },
-    price: {
+    product_price: {
       type: Number,
       required: true,
     },
@@ -16,15 +16,16 @@ const ProductSchema: any = new Schema(
     discountPercentage: {
       type: Number,
     },
-    imageSrc: {
+    product_image: {
       type: String,
       required: true,
     },
-    category: {
+    main_category: {
       type: Schema.Types.ObjectId,
       ref: "Category",
+      required: true, 
     },
-    subcategories: [
+    sub_categories: [
       {
         type: Schema.Types.ObjectId,
         ref: "SubCategory",

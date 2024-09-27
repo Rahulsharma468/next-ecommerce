@@ -1,32 +1,36 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Axios from 'axios';
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter(); // Initialize the router instance
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await Axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_URI}/user/login`,
+        { email, password },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-      if (response.ok) {
-        const data = await response.json();
-        console.log("Login successful:", data);
-        // Redirect to dashboard or another page upon successful login
+
+      if (response.data.success) {
+
+        localStorage.setItem("token", response.data.token);
+
+        router.push("/home");
       } else {
-        const errorData = await response.json();
-        console.error("Login failed:", errorData.message);
-        // Display error message to the user
+        console.error("Login failed:", response.data.message);
       }
     } catch (error) {
       console.error("Error logging in:", error);
-      // Display generic error message to the user
     }
   };
 

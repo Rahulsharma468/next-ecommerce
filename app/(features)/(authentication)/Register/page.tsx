@@ -8,7 +8,7 @@ export default function RegisterForm() {
 
   const handleRegister = async () => {
     try {
-      const response = await fetch("/api/register", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URI}/user/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

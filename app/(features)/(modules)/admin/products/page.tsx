@@ -111,7 +111,7 @@ function AddProductForm() {
       formData.append("signature", signature);
       formData.append("timestamp", timestamp.toString());
       formData.append("api_key", process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY || '');
-      formData.append("folder", process.env.NEXT_PUBLIC_CLOUDINARY_FOLDER || "");
+      // formData.append("folder", process.env.NEXT_PUBLIC_CLOUDINARY_FOLDER || "");
       
       const response = await fetch(url, {
         method: "POST",
@@ -134,7 +134,7 @@ function AddProductForm() {
 
     try {
       let uploadedImageUrl = "";
-
+      console.log('Product Image:: ' , productImage)
       if (productImage) {
         // Upload image to Cloudinary
         uploadedImageUrl = await uploadImageToCloudinary(productImage);
@@ -155,8 +155,8 @@ function AddProductForm() {
       console.log(data);
 
       // Uncomment the following line to make the API request
-      // const productResponse = await Axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URI}/product`, data);
-
+      const productResponse = await Axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URI}/product`, data);
+      console.log(productResponse);
       setProductName("");
       setProductPrice("");
       setIsOnSale(false);
