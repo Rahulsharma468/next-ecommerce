@@ -10,7 +10,7 @@ function AdminProducts() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await Axios.get("http://localhost:3000/api/product");
+        const response = await Axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URI}/product`);
         setProductList(response.data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
