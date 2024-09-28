@@ -1,8 +1,11 @@
+import HomePage from "@/app/components/Home";
+import Footer from "@/app/components/Footer";
+
 function Home() {
   return (
     <div>
-      OK
-      <div>ok</div>
+      <HomePage />
+      <Footer />
     </div>
   );
 }
