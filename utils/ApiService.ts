@@ -10,7 +10,7 @@ const axiosInstance = Axios.create({
 const handleErrorResponse = (err: any) => {
   if (
     err.message ===
-      "Unauthenticated access is not supported for this identity pool. " ||
+      "Unauthenticated access is not supported for this identity pool." ||
     (err.response && err.response.status === 401)
   ) {
     window.location.href = "/Login";

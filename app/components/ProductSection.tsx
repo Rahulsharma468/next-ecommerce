@@ -20,7 +20,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, data }) => {
                   <div className="flex overflow-hidden relative flex-col items-end self-stretch px-16 pt-3.5 pb-20 w-full text-sm font-bold leading-3 text-black whitespace-nowrap aspect-square max-md:pl-5">
                     <Image
                       loading="lazy"
-                      src={`/${item.imageSrc}`}
+                      src={`/${item.product_image}`}
                       alt="productImage"
                       className="object-cover absolute inset-0 size-full"
                       width={100}
@@ -43,14 +43,14 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, data }) => {
                             {item.price}
                           </div>
                         )}
-                        {item.discountedPrice && (
+                        {item.discounted_price && (
                           <div className="text-base text-neutral-900">
-                            {item.discountedPrice}
+                            {item.discounted_price}
                           </div>
                         )}
                       </div>
                       <div className="mt-3 text-base text-red-600">
-                        {item.discountedPrice && "(18% off )"}{" "}
+                        {item.discounted_price && "(18% off )"}{" "}
                       </div>
                     </>
                   )}

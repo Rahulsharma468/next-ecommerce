@@ -10,10 +10,10 @@ const ProductSchema: any = new Schema(
       type: Number,
       required: true,
     },
-    discountedPrice: {
+    discounted_price: {
       type: Number,
     },
-    discountPercentage: {
+    discount_percentage: {
       type: Number,
     },
     product_image: {
@@ -28,7 +28,7 @@ const ProductSchema: any = new Schema(
     sub_categories: [
       {
         type: Schema.Types.ObjectId,
-        ref: "SubCategory",
+        ref: "Subcategory",
       },
     ],
     isOnSale: {
