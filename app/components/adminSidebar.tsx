@@ -15,7 +15,7 @@ function DefaultSidebar() {
         {/* Logo Section */}
         <div className="flex items-center justify-center h-20 bg-indigo-600">
           <Image
-            src="/logo.svg"
+            src="/next.svg"
             alt="Admin Logo"
             width={50}
             height={50}

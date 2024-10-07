@@ -151,7 +151,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex text-black">
       <AdminSidebar />
 
       <div className="w-full p-6">
